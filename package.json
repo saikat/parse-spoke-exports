@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/saikat/parse-spoke-exports#readme",
   "dependencies": {
-    "babyparse": "^0.4.6"
+    "babyparse": "^0.4.6",
+    "moment": "^2.15.1"
   }
 }
