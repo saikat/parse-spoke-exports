@@ -1,0 +1,25 @@
+{
+  "name": "parse-spoke-exports",
+  "version": "1.0.0",
+  "description": "Parse Spoke Exports",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/saikat/parse-spoke-exports.git"
+  },
+  "keywords": [
+    "Spoke"
+  ],
+  "author": "Saikat Chakrabarti",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/saikat/parse-spoke-exports/issues"
+  },
+  "homepage": "https://github.com/saikat/parse-spoke-exports#readme",
+  "dependencies": {
+    "babyparse": "^0.4.6"
+  }
+}
