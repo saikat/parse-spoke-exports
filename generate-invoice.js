@@ -12,15 +12,18 @@ if (messages.errors.length > 0) {
 }
 
 messages.data.forEach((message) => {
-  var date = moment(message.attemptedAt)
-  var month = date.get('month')
-  if (!charges.hasOwnProperty(month)) {
-    charges[month] = {}
+  if (message.isFromContact === 'false') {
+    var date = moment(message.attemptedAt).utc()
+    var month = date.get('month')
+    if (!charges.hasOwnProperty(month)) {
+      charges[month] = {}
+    }
+    charges[month][message.contactNumber] = 0.07
   }
-  charges[month][message.contactNumber] = 0.07
 })
 
 Object.keys(charges).forEach((month) => {
+  console.log("JS month, ", month, ": ", Object.keys(charges[month]).length, " unique numbers")
   if (!totals.hasOwnProperty(month)) {
     totals[month] = 0
   }
